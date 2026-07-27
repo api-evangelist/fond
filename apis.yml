@@ -1,8 +1,26 @@
 aid: fond
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fond.png
 name: Fond
-description: 'Fond is a company surfaced as a portfolio company of dcm-ventures and added to the API Evangelist
-  network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Fond (formerly AnyPerk) is a U.S. employee rewards and recognition platform that lets
+  companies run customizable recognition programs combining monetary and non-monetary rewards, perks,
+  and a global rewards catalog. Fond offers a gated public/provider API that allows authenticated
+  partners to programmatically manage a Fond account — provisioning, employee roster management,
+  giving recognition to one or more employees, and rewards redemption — alongside integrations for
+  Workday, ADP, Namely, Salesforce, Slack, and other HR systems. There is no open developer portal or
+  published OpenAPI; API access is arranged directly via integration@fond.co. Fond was acquired by
+  Reward Gateway in March 2023 and fond.co now redirects to rewardgateway.com. Originally added to the
+  API Evangelist network as a portfolio lead of DCM Ventures.'
 url: https://raw.githubusercontent.com/api-evangelist/fond/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +28,20 @@ x-backed-by:
 - dcm-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: reward-gateway
+x-acquired-date: '2023-03-01'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
+- Employee Recognition
+- Rewards
+- Human Resources
+- Employee Engagement
+- Perks
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +49,17 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/fond-domain-security.yml
 - type: Website
   url: https://fond.co/
+- type: Documentation
+  name: Fond Public API
+  url: https://www.fond.co/resources/our-public-api/
+- type: Blog
+  url: https://www.fond.co/blog/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
